@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class DepositCalculator {
 
     public static void main(String[] args) {
-        new DepositCalculator().importantJob();
+        new DepositCalculator().choiceTypeDeposit();
     }
 
     double calculateComplexPercent(double presentValue, double interestRate, int numberBillingPeriods) {
@@ -11,8 +11,8 @@ public class DepositCalculator {
         return round(pay, 2);
     }
 
-    double calculateSimplePercent(double doubleAmount, double yearRate, int depositPeriod) {
-        return round(doubleAmount + doubleAmount * yearRate * depositPeriod, 2);
+    double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
+        return round(amount + amount * yearRate * depositPeriod, 2);
     }
 
     double round(double value, int places) {
@@ -20,7 +20,7 @@ public class DepositCalculator {
         return Math.round(value * scale) / scale;
     }
 
-    void importantJob() {
+    void choiceTypeDeposit() {
         int period;
         int action;
 
